@@ -8,6 +8,7 @@ import (
 	"github.com/render-test-server/internal/config"
 	httpserver "github.com/render-test-server/internal/http-server"
 	"github.com/render-test-server/internal/logger"
+	"github.com/render-test-server/internal/smtptool"
 )
 
 func main() {
@@ -17,6 +18,8 @@ func main() {
     cfg := config.MustLoadConfig()
 
     logger.Infof("Start %s", time.Now().String())
+
+    smtptool.RunOnceToCheck(cfg.SMTPConfig)
 
     wg := new(sync.WaitGroup)	
 	wg.Add(1)

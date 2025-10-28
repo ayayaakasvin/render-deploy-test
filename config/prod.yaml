@@ -2,3 +2,8 @@ http_server:
   address: "0.0.0.0:10000"
   timeout: 10s
   idle_timeout: 60s
+
+smtp:
+  username: "kozhamseitov06@gmail.com"
+  host: "smtp.gmail.com"
+  port: 587

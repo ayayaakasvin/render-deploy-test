@@ -19,7 +19,8 @@ func main() {
 
     logger.Infof("Start %s", time.Now().String())
 
-    smtptool.RunOnceToCheck(cfg.SMTPConfig)
+    logger.Infof("%v", cfg)
+    logger.WithError(smtptool.RunOnceToCheck(cfg.SMTPConfig)).Info("Calling the smtp execution")
 
     wg := new(sync.WaitGroup)	
 	wg.Add(1)

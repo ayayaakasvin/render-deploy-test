@@ -17,7 +17,7 @@ const (
 // Config represents the configuration structure
 type Config struct {
 	HTTPServer 					`yaml:"http_server"																env-required:"true"`
-	SMTPConfig					`yaml:"smtp																		env-required:"true""`
+	SMTPConfig					`yaml:"smtp"																	env-required:"true""`
 }
 
 type HTTPServer struct {

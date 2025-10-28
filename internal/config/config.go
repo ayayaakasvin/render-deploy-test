@@ -37,7 +37,7 @@ type SMTPConfig struct {
 // MustLoadConfig loads the configuration from the specified path
 func MustLoadConfig() *Config {
 	if err := godotenv.Load(); err != nil {
-		log.Fatalf("failed to load .env: %s", err.Error())
+		log.Printf("%s", err.Error())
 	}
 
 	configPath := os.Getenv(configPathEnvKey)

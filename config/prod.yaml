@@ -6,4 +6,4 @@ http_server:
 smtp:
   username: "kozhamseitov06@gmail.com"
   host: "smtp.gmail.com"
-  port: 587
+  port: 465
